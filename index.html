@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>GK Daily Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- TOP BAR -->
+      <div class="topbar">
+        <div>🔥 <span id="streak">0</span> day streak</div>
+        <div class="timer">⏱ <span id="timer">15</span>s</div>
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div class="progress">
+        <div id="progressBar"></div>
+      </div>
+
+      <!-- QUESTION META -->
+      <div class="qmeta">
+        Question <span id="qno">1</span> / <span id="total">10</span>
+      </div>
+
+      <!-- MAIN QUIZ CARD -->
+      <div class="quiz-box">
+        <div class="quiz-header">
+          <h2>🧠 30-Minute GK Challenge</h2>
+         <button id="langBtn" class="lang-btn" onclick="toggleLang()">हिं</button>
+        </div>
+
+
+        <div id="question"></div>
+        <div id="options"></div>
+
+        <div id="explanation"></div>
+
+        <button id="nextBtn" class="next-btn">Next</button>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
