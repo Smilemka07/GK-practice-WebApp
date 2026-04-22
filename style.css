@@ -174,3 +174,31 @@ button:hover {
 .quiz-box.fade {
   opacity: 0.6;
 }
+
+.topbar,
+.progress,
+.qmeta,
+.quiz-box {
+  width: 90%;
+  max-width: 420px;
+}
+
+@media (max-width: 480px) {
+  .quiz-box {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  #question {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .topbar {
+    font-size: 14px;
+  }
+}
