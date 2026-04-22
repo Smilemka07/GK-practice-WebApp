@@ -1,43 +1,59 @@
 <!doctype html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GK Daily Quiz</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div class="app">
-      <!-- TOP BAR -->
-      <div class="topbar">
-        <div>🔥 <span id="streak">0</span> day streak</div>
-        <div class="timer">⏱ <span id="timer">15</span>s</div>
+      <!-- START SCREEN -->
+      <div id="startScreen" class="start-screen">
+        <h2>🧠 GK Daily Challenge</h2>
+
+        <ul class="instructions">
+          <li>⏱ 15 seconds per question</li>
+          <li>📊 Instant score + explanations</li>
+          <li>🔥 Maintain your streak</li>
+          <li>🎯 Based on SSC / UPSC pattern</li>
+        </ul>
+
+        <button id="startBtn" class="start-btn">Start Test</button>
       </div>
 
-      <!-- PROGRESS BAR -->
-      <div class="progress">
-        <div id="progressBar"></div>
-      </div>
-
-      <!-- QUESTION META -->
-      <div class="qmeta">
-        Question <span id="qno">1</span> / <span id="total">10</span>
-      </div>
-
-      <!-- MAIN QUIZ CARD -->
-      <div class="quiz-box">
-        <div class="quiz-header">
-          <h2>🧠 30-Minute GK Challenge</h2>
-         <button id="langBtn" class="lang-btn" onclick="toggleLang()">हिं</button>
+      <!-- QUIZ APP (HIDDEN INITIALLY) -->
+      <div id="quizApp" style="display: none">
+        <!-- TOP BAR -->
+        <div class="topbar">
+          <div>🔥 <span id="streak">0</span> times streak</div>
+          <div class="timer">⏱ <span id="timer">15</span>s</div>
         </div>
 
+        <!-- PROGRESS -->
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
 
-        <div id="question"></div>
-        <div id="options"></div>
+        <!-- META -->
+        <div class="qmeta">
+          Question <span id="qno">1</span> / <span id="total">10</span>
+        </div>
 
-        <div id="explanation"></div>
+        <!-- QUIZ CARD -->
+        <div class="quiz-box">
+          <div class="quiz-header">
+            <h2>🧠 5-Minute GK Challenge</h2>
+            <button id="langBtn" class="lang-btn" onclick="toggleLang()">
+              हिं
+            </button>
+          </div>
 
-        <button id="nextBtn" class="next-btn">Next</button>
+          <div id="question"></div>
+          <div id="options"></div>
+          <div id="explanation"></div>
+          <button id="nextBtn" class="next-btn">Next</button>
+        </div>
       </div>
     </div>
 

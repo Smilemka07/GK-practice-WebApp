@@ -151,4 +151,13 @@ function showResult() {
 window.toggleLang = toggleLang;
 
 // START
-loadQuestion();
+const startBtn = document.getElementById("startBtn");
+const startScreen = document.getElementById("startScreen");
+const quizApp = document.getElementById("quizApp");
+
+startBtn.addEventListener("click", () => {
+  startScreen.style.display = "none";
+  quizApp.style.display = "block";
+
+  loadQuestion(); // start quiz here
+});
